@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  //actualizarDiasRestantes();
-  //setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
+  actualizarDiasRestantes();
+  setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
 
   const chartFontFamily = '"Tajawal", Arial, sans-serif';
   const sharedChartOptions = {
@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const dataLine1 = {
     labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días], // Etiquetas de los días
     datasets: [{
-      label: 'Km recorridos en Semana 5',
-      data: [14, 12, 13, 36], // Datos de los km recorridos en cada día
+      label: 'Km recorridos en Semana 7',
+      data: [7, 8, 7, 12], // Datos de los km recorridos en cada día
       borderColor: 'rgba(45, 74, 62, 1)',
       backgroundColor: 'rgba(45, 74, 62, 0.16)',
       fill: true
@@ -106,10 +106,10 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const dataLine2 = {
-    labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días
+    labels: ['Día 1', 'Día 2', 'Día 3'], // Etiquetas de los días
     datasets: [{
-      label: 'Total Km recorridos en Semana 6',
-      data: [11, 11, 12, 18],// Datos de los km recorridos en cada día
+      label: 'Total Km recorridos en Semana 8',
+      data: [5, 4, 55],// Datos de los km recorridos en cada día
       borderColor: 'rgba(45, 78, 199, 1)',
       backgroundColor: 'rgba(45, 78, 199, 0.14)',
       fill: true
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function actualizarDiasRestantes() {
   // Fecha objetivo fija
-  const objetivoDate = new Date('2026-10-11');
+  const objetivoDate = new Date('2026-11-20');
   const currentDate = new Date();
   const timeDiff = objetivoDate - currentDate;
   const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
@@ -144,39 +144,5 @@ function actualizarDiasRestantes() {
   countdownElement.innerHTML = `<span class="cuenta-regresiva-titulo">CUENTA REGRESIVA</span><br><span class="cuenta-regresiva-numero">${days}d : ${hours}h : ${minutes}m : ${seconds}s</span>`;
 }
 
-  // Crear dos nuevas instancias de HTMLVideoElement para cada sección
-  let Semana_1_video_1 = document.createElement("video");
-  let Semana_1_video_2 = document.createElement("video");
-  let Semana_2_video_3 = document.createElement("video");
-  let Semana_2_video_4 = document.createElement("video");
-
-  // Establecer las fuentes de video
-  Semana_1_video_1.src = "video 1.mp4"; // ruta de su primer video
-  Semana_1_video_2.src = "video 2.mp4"; // ruta de su segundo video
-  Semana_2_video_3.src = "video 3.mp4"; // ruta de su tercer video
-  Semana_2_video_4.src = "video 4.mp4"; // ruta de su cuarto video
-
-  // Establecer atributos de video
-  Semana_1_video_1.controls = true;
-  Semana_1_video_1.autoplay = false;
-  Semana_1_video_1.loop = false;
-
-  Semana_1_video_2.controls = true;
-  Semana_1_video_2.autoplay = false;
-  Semana_1_video_2.loop = false;
-
-  Semana_2_video_3.controls = true;
-  Semana_2_video_3.autoplay = false;
-  Semana_2_video_3.loop = false;
-
-  Semana_2_video_4.controls = true;
-  Semana_2_video_4.autoplay = false;
-  Semana_2_video_4.loop = false;
-
-  // Agregar los dos videos a cada sección
-  document.getElementById("Semana 1").appendChild(video1);
-  document.getElementById("Semana 1").appendChild(video2);
-  document.getElementById("Semana 2").appendChild(video3);
-  document.getElementById("Semana 2").appendChild(video4);
 
 });
