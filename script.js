@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  actualizarDiasRestantes();
-  setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
+  //actualizarDiasRestantes();
+  //setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
 
   const chartFontFamily = '"Tajawal", Arial, sans-serif';
   const sharedChartOptions = {
@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const dataLine1 = {
     labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días], // Etiquetas de los días
     datasets: [{
-      label: 'Km recorridos en Semana 7',
-      data: [7, 8, 7, 12], // Datos de los km recorridos en cada día
+      label: 'Km recorridos en Semana 9',
+      data: [13, 13, 11, 12], // Datos de los km recorridos en cada día
       borderColor: 'rgba(45, 74, 62, 1)',
       backgroundColor: 'rgba(45, 74, 62, 0.16)',
       fill: true
@@ -106,10 +106,10 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const dataLine2 = {
-    labels: ['Día 1', 'Día 2', 'Día 3'], // Etiquetas de los días
+    labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días
     datasets: [{
-      label: 'Total Km recorridos en Semana 8',
-      data: [5, 4, 55],// Datos de los km recorridos en cada día
+      label: 'Total Km recorridos en Semana 10',
+      data: [11, 10, 8, 22],// Datos de los km recorridos en cada día
       borderColor: 'rgba(45, 78, 199, 1)',
       backgroundColor: 'rgba(45, 78, 199, 0.14)',
       fill: true
